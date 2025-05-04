@@ -14,8 +14,9 @@
     <h1>Nino Manzoni</h1>
     <?php
         // DB config.
-         
-		require_once('db_config.php');
+        // Deploy deluje.
+
+	require_once('db_config.php');
 
         $conn = new mysqli($host, $username, $password, $dbname);
 
