@@ -11,6 +11,9 @@
 	<li><a href="hobiji.html">Podstran - Moji hobiji</a></li>
 	<li><a href="almamater.html">Podstran - Almamater</a></li>
 	</ul>
+	<ul>
+	<li><a href="hello.html">Stran - hello.html</a></li>
+	</ul>
     <h1>Nino Manzoni</h1>
     <?php
         // DB config.
