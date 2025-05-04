@@ -1,14 +1,15 @@
-name: Debug SSH to EC2
+name: Debug EC2 SSH
 
 on:
   workflow_dispatch:
 
 jobs:
-  debug-ssh:
+  debug:
     runs-on: ubuntu-latest
     steps:
-    - name: Check key format
-      run: |
-        echo "${{ secrets.EC2_PRIVATE_KEY }}" > private_key.pem
-        chmod 600 private_key.pem
-        ssh -o StrictHostKeyChecking=no -i private_key.pem ubuntu@${{ secrets.EC2_HOST }} "echo 'SSH success!'"
+      - name: Try SSH
+        run: |
+          echo "${{ secrets.EC2_PRIVATE_KEY }}" > key.pem
+          chmod 600 key.pem
+          ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@${{ secrets.EC2_HOST }} "echo SSH success"
+
